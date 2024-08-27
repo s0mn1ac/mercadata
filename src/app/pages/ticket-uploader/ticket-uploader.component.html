@@ -1,0 +1,19 @@
+<div class="page-layout">
+
+  <div>
+    <input type="file" multiple (change)="onChangeFileSelected($event)" accept=".pdf" />
+    @if (tickets) {}
+    <div>
+      <h3>Tickets:</h3>
+      @for (ticket of tickets; track $index) {
+        <p>{{ ticket.date }}</p>
+        <ul>
+          @for (item of ticket.items; track $index) {
+            <li>{{ item.quantity + ' ' + item.name + ' ' + item.price }}</li>
+          }
+        </ul>
+      }
+    </div>
+  </div>
+
+</div>

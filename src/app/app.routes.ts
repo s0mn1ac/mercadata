@@ -8,8 +8,13 @@ export const routes: Routes = [
       .then((home) => home.routes)
   },
   {
+    path: 'ticket-uploader',
+    loadChildren: () => import('./pages/ticket-uploader/ticket-uploader.routes')
+      .then((ticket) => ticket.routes)
+  },
+  {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'home'
+    redirectTo: 'ticket-uploader'
   }
 ];

@@ -1,0 +1,22 @@
+.app-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+
+  &__sidebar {
+    min-width: 20rem;
+  }
+
+  &__content {
+    flex: 1;
+  }
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 16px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
